@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/003a1b0cec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <h1>To-Do List</h1>
+                <p>Keep It Up!</p>
+                <div id="progressbar">
+                    <div id="progress"></div>
+
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <p id="numbers">0 / 0</p>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="text" id="taskinput" placeholder="write your task ...">
+            <button id="newtask" type="submit">&#43</button>
+        </form>
+        <ul class="task-list"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

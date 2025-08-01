@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Caslon Text', sans-serif;
+    background-color: #999ecf;
+    color: #3f2a52;
+}
+
+h1 {
+    margin-bottom: 10px; /* مقدار دلخواه برای فاصله */
+}
+
+p {
+    margin-top: 0; /* اگر میخوای فقط فاصله h1 تأثیر داشته باشه */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 500px;
+    margin: 120PX auto 0 auto;
+}
+
+.stats-container {
+    padding: 35px;
+    border-radius: 10px;
+    border: 4px solid #edddec;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+
+.details {
+    width: 100%;
+}
+
+#progressbar {
+    width: 100%;
+    height: 10px;
+    background-color: #3f2a52;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress {
+    width: 0%;
+    height: 10px;
+    background-color: #75619d;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: #6d588b;
+    /* رنگ پیش‌فرض */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* برای تغییر نرم رنگ */
+}
+
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 13px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    background: #60509d;
+    border: 3px solid #edddec;
+    border-radius: 10px;
+    outline: none;
+    color: #edddec;
+
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #60509d;
+    color: #edddec;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+}
+
+
+
+.task-item-box {
+    margin-top: 8%;
+    background-color: #edddec;
+    border: 3px solid #60509d;
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px #3f2a52;
+    transition: transform 0.2s ease;
+}
+
+.task-item-box:hover {
+    transform: scale(1.02);
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-left span {
+    font-size: 17px;
+}
+
+.task-actions img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    /* فاصله بین آیکون‌ها */
+    margin-left: 20px;
+    /* فاصله از متن */
+    align-items: center;
+}
+
+.task-actions i {
+    cursor: pointer;
+    font-size: 20px;
+    color: #3f2a52;
+    transition: color 0.3s ease;
+}
+
+.task-actions i:hover {
+    color: #75619d;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 60px;
+        max-width: 90%;
+        padding: 0 10px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .stats-numbers {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 24px !important;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        height: 45px;
+        font-size: 24px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .task-left span {
+        font-size: 15px;
+    }
+
+    #numbers {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 20px !important;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}
