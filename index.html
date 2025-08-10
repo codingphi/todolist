@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Dual Lists</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">To-Do List</h1>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark theme">
+            <label for="theme-switch" class="theme-label">
+                <span class="theme-slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="list-panel" aria-labelledby="favorites-title">
+            <h2 id="favorites-title" class="panel-title">Personal Favorites</h2>
+            <ul class="item-list" role="list">
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Morning Coffee Ritual</h3>
+                            <p class="item-subtitle">A perfect blend to start the day</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-1-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-1-details" aria-hidden="true">
+                        <p>The gentle aroma of freshly ground beans mixed with warm milk creates the perfect morning
+                            symphony. This ritual marks the transition from sleep to awakening consciousness.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Evening Literature</h3>
+                            <p class="item-subtitle">Words that transport to other worlds</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-2-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-2-details" aria-hidden="true">
+                        <p>Between the pages lies infinite possibility. Each evening dedicated to literary exploration
+                            becomes a journey through imagination and human experience.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4l5 4V7l-5 4z" />
+                                <path d="M22.54 6.62a10.58 10.58 0 0 1 0 10.76" />
+                                <path d="M19.07 8.54a6 6 0 0 1 0 6.92" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Vinyl Collection</h3>
+                            <p class="item-subtitle">Analog warmth in digital times</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-3-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-3-details" aria-hidden="true">
+                        <p>The tactile experience of placing needle to groove, the large-format artwork, the intentional
+                            listening – vinyl records offer a mindful approach to music consumption.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Hidden Garden Spot</h3>
+                            <p class="item-subtitle">Secret sanctuary for reflection</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-4-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-4-details" aria-hidden="true">
+                        <p>Tucked away from the world's noise, this quiet corner offers solitude and natural beauty. The
+                            perfect place for contemplation and creative thinking.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Sunday Rituals</h3>
+                            <p class="item-subtitle">Weekly moments of intentional pause</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-5-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-5-details" aria-hidden="true">
+                        <p>Every Sunday reserved for slow living – preparing a special meal, writing in journals,
+                            tending to plants. These rituals create rhythm and meaning in busy lives.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Handwritten Letters</h3>
+                            <p class="item-subtitle">Personal touch in digital age</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-6-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-6-details" aria-hidden="true">
+                        <p>The deliberate act of putting pen to paper, choosing words carefully, sealing with care –
+                            handwritten letters carry emotional weight that digital communication cannot match.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="list-panel" aria-labelledby="discoveries-title">
+            <h2 id="discoveries-title" class="panel-title">Recent Discoveries</h2>
+            <ul class="item-list" role="list">
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Mindful Breathing</h3>
+                            <p class="item-subtitle">Simple practice, profound impact</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-7-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-7-details" aria-hidden="true">
+                        <p>Recently discovered the transformative power of conscious breathing. Five minutes of focused
+                            attention to breath can shift entire mental states and bring clarity to complex situations.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Artisan Pottery</h3>
+                            <p class="item-subtitle">Creating beauty with earth and fire</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-8-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-8-details" aria-hidden="true">
+                        <p>The meditative process of shaping clay connects hands to ancient traditions. Each piece
+                            emerges unique, bearing the marks of human touch and creative intention.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="7.5,4.21 12,6.81 16.5,4.21" />
+                                <polyline points="7.5,19.79 7.5,14.6 3,12" />
+                                <polyline points="21,12 16.5,14.6 16.5,19.79" />
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Urban Foraging</h3>
+                            <p class="item-subtitle">Finding nature in city spaces</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-9-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-9-details" aria-hidden="true">
+                        <p>Discovering edible plants and herbs growing wild in urban environments. This practice
+                            reconnects city dwellers with natural abundance and seasonal rhythms.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Language Exchange</h3>
+                            <p class="item-subtitle">Connecting cultures through words</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-10-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-10-details" aria-hidden="true">
+                        <p>Weekly conversations with native speakers create opportunities for cultural exchange while
+                            building language skills. Each session opens windows to new perspectives and ways of
+                            thinking.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="5.5" cy="11.5" r="4.5" />
+                                <circle cx="18.5" cy="11.5" r="4.5" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Stargazing Sessions</h3>
+                            <p class="item-subtitle">Cosmic perspective on earthly worries</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-11-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-11-details" aria-hidden="true">
+                        <p>Regular midnight observations of constellations and planets provide a humbling reminder of
+                            our place in the universe. Celestial patterns become companions in contemplation.</p>
+                    </div>
+                </li>
+
+                <li class="list-item" role="listitem">
+                    <div class="item-content">
+                        <div class="item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20V10" />
+                                <path d="M18 20V4" />
+                                <path d="M6 20v-4" />
+                            </svg>
+                        </div>
+                        <div class="item-text">
+                            <h3 class="item-title">Sound Bathing</h3>
+                            <p class="item-subtitle">Healing through vibrational therapy</p>
+                        </div>
+                        <button class="action-btn" aria-expanded="false" aria-controls="item-12-details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="item-details" id="item-12-details" aria-hidden="true">
+                        <p>Immersive experiences with singing bowls, gongs, and chimes create therapeutic soundscapes.
+                            These sessions release tension and promote deep relaxation through harmonic resonance.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <div id="todo-list-container">
+        <h2>Write Your Own</h2>
+        <input type="text" id="todo-input" placeholder="Add new task" />
+        <button id="add-todo-btn">Add</button>
+        <ul id="todo-items"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
